@@ -1,0 +1,55 @@
+/*
+* Fonts:
+*/
+
+$f-g: 'HK Grotesk', sans-serif;
+$f-f: 'TT Firs', sans-serif;
+
+/*
+* Breakpoints:
+*/
+
+$desktop: 1280px;
+$tablet: 768px;
+$mobile: 375px;
+
+/*
+* Sizes:
+*/
+$wrapper: 1440px;
+
+/*
+* Colors:
+*/
+
+:root {
+  // #13141A
+  --navItem: 19, 20, 26;
+
+  // #F6F5F2
+  --light: 246, 245, 242;
+
+  // #FDFDFD;
+  --white: 253, 253, 253;
+
+  // #2E2E2E;
+  --dark: 46, 46, 46;
+
+  // #13141A
+  --black: 19, 20, 26;
+
+  // #5B5959
+  --grey: 91, 89, 89;
+
+  // #249681
+  --green: 36, 150, 129;
+
+  // #ffcd19
+  --yellow: 255, 205, 25;
+
+  // #ecada9
+  --pink: 236, 173, 169;
+
+  // #F56B58
+  --orange: 245, 107, 88;
+}

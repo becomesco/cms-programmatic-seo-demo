@@ -1,0 +1,51 @@
+@import "./settings/index";
+@import "./components/index";
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  min-height: 100vh;
+  padding-top: 100px;
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: rotate(180deg);
+    background-image: url("/base-bg.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+}
+
+.wrapper {
+  max-width: $wrapper;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  @include fluid(padding-right padding-left, 375px, 1600px, 24px, 88px);
+}
+
+.link {
+  display: flex;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: "sans-serif";
+  color: inherit;
+  margin-bottom: 40px;
+  &:hover,
+  &:focus-visible {
+    text-decoration: underline;
+  }
+}

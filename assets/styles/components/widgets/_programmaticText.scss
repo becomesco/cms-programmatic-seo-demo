@@ -1,0 +1,38 @@
+.programmaticTextWidget {
+  .wrapper {
+    @include fluid(padding-top, 375px, 1440px, 64px, 120px);
+    @include fluid(padding-bottom, 375px, 1440px, 64px, 150px);
+  }
+  &--inner {
+    max-width: 1150px;
+    margin: 0 auto;
+  }
+  &--title {
+    @include fluid(margin-bottom, 375px, 1440px, 26px, 40px);
+    max-width: 900px;
+    h2 {
+      font-family: $f-f;
+      font-weight: 400;
+      @include fluid(font-size, 375px, 1440px, 32px, 48px);
+      line-height: 1.33;
+      letter-spacing: -0.03em;
+      u {
+        text-decoration: none;
+        font-weight: 600;
+      }
+    }
+  }
+  &--description {
+    font-weight: 500;
+    font-size: 18px;
+    letter-spacing: -0.01em;
+    line-height: 1.56;
+    color: rgba(var(--grey), 1);
+    max-width: 810px;
+    p {
+      &:not(:last-of-type) {
+        @include fluid(margin-bottom, 375px, 1440px, 16px, 20px);
+      }
+    }
+  }
+}
