@@ -177,21 +177,19 @@ export const programmaticApi: BCMSMostServerRoutes = {
         throw new Error(`Invalid slug "${slug}"`);
       }
 
-      /* !!! Use commented code if you are using 'nuxt-plugin-bcms' plugin !!! */
-      // const entry = JSON.parse(
-      //   JSON.stringify(
-      //     await bcms.content.entry.findOne(
-      //       "programmatic",
-      //       async (e) =>
-      //         e.status !== "draft" && e.meta.en.slug === "programmatic"
-      //     )
-      //   )
-      // ) as ProgrammaticEntry;
-      /* END */
+      const entry = JSON.parse(
+        JSON.stringify(
+          await bcms.content.entry.findOne(
+            "programmatic",
+            async (e) =>
+              e.status !== "draft" && e.meta.en.slug === "programmatic"
+          )
+        )
+      ) as ProgrammaticEntry;
 
-      /* !!! Use this code for the testing purposes !!! */
-      const entry =
-        programmaticDataExampleJSON[0] as unknown as ProgrammaticEntry;
+      /* !!! Use this code for the testing purposes only if you don't have your ENV keys set up !!! */
+      // const entry =
+      //   programmaticDataExampleJSON[0] as unknown as ProgrammaticEntry;
       /* END */
 
       if (!entry) {
